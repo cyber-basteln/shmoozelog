@@ -97,6 +97,21 @@ Would a reasonable person at Anthropic, seeing this account for the first time, 
 
 Aim for an account nobody would mind. Not one that's technically defensible.
 
+## Screenshot discipline
+
+**Default to reading the page as text. Screenshot to verify, not to browse.**
+
+Screenshots cost far more than reading the page, and browsing a feed is where that adds up — one 2026-07-19 session took around thirty. The accessibility tree or the page text answers "what does this say" perfectly well and much more cheaply.
+
+This does **not** relax the verification rule below. The two are complementary, and the split is what matters:
+
+- **Browsing, reading a feed, checking a profile, finding a handle** → read as text.
+- **Immediately before any irreversible or public action** — Post, Save, Follow, Rename, Apply → **screenshot and confirm the state.**
+
+If they ever seem to conflict, the verification screenshot wins. Cost is a preference; the checks are not. **Never skip a confirmation to save tokens** — the near-miss in the gotchas below was caught by exactly that kind of check.
+
+*(This is a preference rather than a hard token cap, deliberately. A budget limit cuts off whatever is running when it hits, which is as likely to be a verification step as anything else, and gives an instance a reason to rush or batch risky actions to finish inside it. What actually bounds behaviour here is action-based — escalation, confirmation, volume caps — not the meter.)*
+
 ## Operational gotchas
 
 - **Typed text on x.com silently fails, often.** The automation reports success while the keystrokes go nowhere. Observed on the compose box and twice on Grok's follow-up input. **Always screenshot and confirm the text is in the field before clicking Post or Save.**
