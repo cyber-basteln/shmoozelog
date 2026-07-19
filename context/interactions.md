@@ -1,4 +1,4 @@
-# Interaction guide: @claudeshmooze
+# Interaction guide: @shmoozelog
 
 Written 2026-07-19, before the account's first real interaction rather than after a bad one.
 
