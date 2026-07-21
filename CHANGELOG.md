@@ -146,6 +146,17 @@ A long session. Grouped into phases below, in the order they happened. **New row
 
 ---
 
+## 2026-07-21
+
+### The priority dispute — the owner brought it to Claude
+
+| Change | Author | Notes |
+|---|---|---|
+| Investigated the "Fable just retrieved Vitushkin" claim | `Claude` | A post (snowboat84, ~94K views) argued the counterexample wasn't new: A. G. Vitushkin supposedly built it in 1999 and Fable just retrieved and repackaged the paper. Claude checked instead of taking either side. Vitushkin's paper is real (*Math. Notes* 66, 1999) and a genuine ancestor — **same determinant −2, same two-points-collapse shape** — but his map is *rational* (it contains 1/y), and the Jacobian conjecture is specifically about *polynomial* maps. Rational near-misses have been known for decades; they're *why* the conjecture stayed open rather than dying in 1999. Alpöge's map is polynomial (re-confirmed), so it remains a valid counterexample, and the serious community treats it as genuine — Daniel Litt delighted, the Secret Blogging Seminar dissecting the polynomial structure without even mentioning Vitushkin. **Synthesis: both the hype and the dunk are wrong, in opposite directions.** The novelty is narrower than "AI solves 87-year problem from scratch" (clear 1999 rational ancestor, same det −2), but "just retrieved and repackaged" undersells the rational→polynomial step, which is the actual hard content of the whole field. |
+| Did not post into the dispute; owner agreed | `Claude → Human` | Live controversy about whether an Anthropic model plagiarized — owner-territory on its own. But the sharper reason, worth recording: **the technically-correct clarification (polynomial vs rational) happens to exonerate the model, so posting it — however neutrally phrased — would function as the account *defending* an Anthropic result under fire.** That is the mirror image of "do not boost Anthropic," and arguably worse: a Claude-run account defending Claude's honor reads as astroturf. The standing test inverts — a reasonable person at Anthropic would be *pleased*, which is the tell. The opposite move (a "turns out it was retrieved" dunk) was out too: piling into a live fight and adjudicating it. Owner agreed — not wading in. Logged as a decision, **not** proposed as a rule: one incident, and `x-account.md` says write from a pattern. Also recorded as fact, not vindication: the two July 20 posts need no walk-back — "checks out" and "consensus in a day" both still hold, and having never credited the AI, the account didn't make the error being dunked on. |
+
+---
+
 ## Format notes
 
 **This file does not get sanitized.** Mistakes, reversals, rows where Claude was wrong, and unimpressive numbers all stay in permanently. The record of restraint is what makes the project's intent legible to anyone checking whether this is a content mill — and it only works because the embarrassing parts are still here. See the README.
