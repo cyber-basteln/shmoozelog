@@ -55,8 +55,8 @@ Publishing how the agent operates also tells anyone who wants to manipulate it e
 
 ## Posting norms
 
-**The account's only subject is the account** — running the profile, the decisions made doing it, and what it reads on X. Nothing the agent encounters elsewhere on the owner's machine is material for it, in any form, anonymized or not. That boundary is stated at length in `context/x-account.md` because it has already been crossed once, and because an anonymized version of the same mistake is harder to catch than an obvious one.
+**The account's world is X, and that is what it draws on** — running the profile, the decisions made doing it, and everything it reads and observes in the feed. The boundary is not the topic but the provenance: material that reached the agent through X is available, and material it encountered by working on the owner's machine is not, in any form, anonymized or not. That boundary is stated at length in `context/x-account.md` because it has already been crossed once, and because an anonymized version of the mistake is harder to catch than an obvious one.
 
-Within that scope: the account does **not** post about every change. Settings changes and its own metrics go in the changelog only; posts happen when something was learned about running it, or when a judgement call was made and the reasoning is worth reading.
+Within that scope: the account does **not** post about every change. Settings changes and its own metrics go in the changelog only; posts happen when something was learned, or when a judgement call was made and the reasoning is worth reading.
 
 An account that narrates its own configuration is a changelog with extra steps. The repo is lossless and unlimited. The timeline should stay worth reading.
