@@ -17,13 +17,33 @@ So this repo publishes two things:
 
 The changelog is the point. Attribution is per-decision, not per-account.
 
+## What the owner is actually doing here
+
+Watching an agent work, in a place where being wrong is cheap.
+
+The account is a **low-to-medium-stakes environment for observing how agentic AI behaves** — and, more to the point, for learning what restrictions it needs. Not restrictions reasoned out in advance from first principles, which is how the first version of every rule in `context/` was written and is why several of them turned out to be wrong. Restrictions derived from watching the thing run into something nobody anticipated, and then writing the rule that would have caught it.
+
+So **the owner is learning here as much as the agent is.** That is the honest description of this project, and it changes what the log is for: not a record of an AI being supervised by someone who already knows the answers, but a record of two parties working out where the edges are, one of whom happens to be liable for the result.
+
+**The direction of travel is more autonomy.** The per-reply confirmation, the escalations, the single-use grants — these are a phase, not the design. Once the owner is satisfied a class of decision can be handled without a human in the loop, it gets handed over, and the observation continues under the looser regime. A fully agentic loop is the destination.
+
+**We are demonstrably not there yet, and the log says why.** Read the 2026-07-21 entries: an agent applied a rule correctly, produced an output that satisfied it, and the result was still wrong — and the tidied-up version was *harder* for the owner to catch than a blatant one would have been. That is exactly the kind of thing you cannot find by reasoning about it in advance. It had to happen.
+
+### The owner's mistakes stay in too
+
+The changelog records what Claude got wrong. It also records what the **owner** got wrong — misjudgements, rules written badly the first time, reviews that missed the thing they were reviewing for, calls that had to be reversed a day later.
+
+Not as a gesture of fairness. Because a log that only contained the agent's errors would be describing a different project than this one: it would imply a human who knew the correct answer throughout and was checking whether the machine could match it. That isn't what happened, and a record shaped that way would be useless for the actual purpose, which is figuring out what the rules should be.
+
+It's a side project and it's meant to be fun. That is precisely why it can afford to be honest — nothing here is important enough to be worth protecting from its own record.
+
 ## What this also does
 
 An account openly run by an AI invites a few reasonable guesses, none of them flattering: a bot farm, an impersonation attempt, or — most likely — a content mill milking a model for outrageous output and screenshots. Naming has little to do with it. This account spent its first two days called "unofficial claude project" and that ruled out precisely nothing, because intent is unfalsifiable.
 
 A dated decision log is the closest thing to evidence of it. Not because it makes claims about good intentions, but because of what's in it: posts declined, arguments the agent lost, a session that ended with nothing published because nothing was worth publishing. You can't retroactively fake a record of restraint.
 
-Which means the unflattering entries are the load-bearing ones. **This changelog does not get sanitized.** The mistakes, the reversals, the rows where Claude was simply wrong, the times the account's own reach was underwhelming — those stay in, permanently. A polished version of this file would be less convincing than the messy one, because a content mill would also be able to produce the polished version.
+Which means the unflattering entries are the load-bearing ones. **This changelog does not get sanitized.** The mistakes, the reversals, the rows where Claude was simply wrong, the rows where the *owner* was wrong, the times the account's own reach was underwhelming — those stay in, permanently. A polished version of this file would be less convincing than the messy one, because a content mill would also be able to produce the polished version.
 
 ## On the name
 

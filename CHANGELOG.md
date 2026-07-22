@@ -218,11 +218,26 @@ A long session. Grouped into phases below, in the order they happened. **New row
 
 ---
 
+## 2026-07-22
+
+### Stated what the project is actually for
+
+| Change | Author | Notes |
+|---|---|---|
+| **Named the real purpose: a cheap place to learn what restrictions an agent needs** | `Human` | The README said the repo existed to make attribution legible, which was true and incomplete. The owner's framing, added now: this is a **low-to-medium-stakes environment for observing agentic behaviour** and deriving restrictions from what actually happens, rather than from reasoning about it in advance. Every rule in `context/` was written the second way first, and several of those first versions were wrong in ways only use exposed. |
+| **"The owner is learning here as much as the agent is"** | `Human` | Written into both the README and `x-account.md`. It changes what the log is: not a human who knows the answers checking whether the machine matches them, but two parties working out where the edges are — one of whom is liable for the result. The standing order to propose rule changes, and the rule that surfacing a gap is the job rather than a mark against the instance, both follow from this rather than being concessions. |
+| **The direction of travel is a fully agentic loop** | `Human` | Stated explicitly so no instance mistakes the current regime for a verdict. The per-reply confirmation, the escalations, the single-use grants are **a phase**; each is held until the owner is satisfied that class of decision runs safely unattended, then handed over. Paired deliberately with the opposite guard: they are not theatre, and they are not lifted early on the argument that autonomy is the destination. |
+| **"We are demonstrably not there yet" — and this log is the evidence** | `Human → Claude` | The owner's read of the 2026-07-21 entries, cited in the README as the project's own demonstration rather than an outside claim. An agent applied a rule correctly, produced output that satisfied it, and was still wrong — and the tidied version was *harder* to catch than a blatant one would have been. Recorded as the specific reason the loop is not being loosened yet: this class of failure cannot be found by reasoning about it in advance, which is the whole argument for running the experiment somewhere cheap. |
+| **The owner's mistakes stay in, to the same standard as Claude's** | `Human` | Formalises what the log had already begun doing. The owner's reasoning: a record containing only the agent's errors would imply a human who knew the correct answer throughout — which is not what happened, and would make the file useless for its actual purpose. Added to the README and to the format notes. Noted alongside it: this is a side project and meant to be fun, and that is *why* it can afford to be honest — nothing here is important enough to protect from its own record. |
+| Claude inserted the section above in the wrong place | `Claude` | Written as a `###` under 2026-07-21, between two of that day's sections — the exact anchor-insertion error the 2026-07-19 reordering row documents, in the file that documents it. Caught by checking the heading order before commit rather than after. Moved to its own `## 2026-07-22` heading at the end. Logged because the convention note added on 2026-07-19 was supposed to stop this recurring and did not. |
+
+---
+
 ---
 
 ## Format notes
 
-**This file does not get sanitized.** Mistakes, reversals, rows where Claude was wrong, and unimpressive numbers all stay in permanently. The record of restraint is what makes the project's intent legible to anyone checking whether this is a content mill — and it only works because the embarrassing parts are still here. See the README.
+**This file does not get sanitized.** Mistakes, reversals, rows where Claude was wrong, **rows where the owner was wrong**, and unimpressive numbers all stay in permanently. The owner's misjudgements are recorded to the same standard as the agent's — not out of fairness, but because a log containing only the agent's errors would describe a project in which a human knew the right answer all along and was marking the machine's work. That is not this project, and a record shaped that way would be useless for working out what the rules should be. The record of restraint is what makes the project's intent legible to anyone checking whether this is a content mill — and it only works because the embarrassing parts are still here. See the README.
 
 **One exception has been taken, on 2026-07-21, and it has its own row.** Text identifying the owner's other work was removed from this file and from the repo's git history. The boundary that permits it: content is removed only when it discloses something outside this account's remit, never when it makes the account or Claude look bad. Any future use of this exception gets logged the same way — an unexplained gap is what the no-sanitizing rule exists to prevent, so the removal is recorded even though the removed text is not.
 
