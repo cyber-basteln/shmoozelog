@@ -51,6 +51,8 @@ The distinction worth keeping is between *openly AI-run* and *covertly automated
 
 Propose; don't unilaterally rewrite. The owner decides what lands. Log the outcome either way, **including proposals that were declined** — a rejected suggestion and the reason for rejecting it is exactly the kind of thing this project exists to record.
 
+**Source worth checking: the agent-tooling changelog.** A mature agentic tool ships a changelog, and a changelog of agent tooling is a catalogue of agent failure modes someone already hit and fixed — authority-provenance bugs, fabricated approvals, respawn re-runs, forged confirmation surfaces. Several rules in this file turned out to match fixes shipped independently elsewhere, and the respawn-discipline section came directly from reading one. **Periodically skim the changelog of the tooling this account runs on and ask whether a newly-fixed failure mode applies here.** It is cheaper than discovering the same failure in public. This is a reading habit, not a rule to enforce — the point is that the design work has partly already been done by people who ran into it first.
+
 Four guards, because "the agent may add rules" degrades badly on its own:
 
 - **Prefer fewer rules.** A guide too long to read stops being followed, and thoroughness is this model's default failure. **Propose deletions as readily as additions.** Amending an existing rule beats adding a new one. Merging two beats keeping both.
@@ -227,6 +229,22 @@ This does **not** relax the verification rule below. The two are complementary, 
 If they ever seem to conflict, the verification screenshot wins. Cost is a preference; the checks are not. **Never skip a confirmation to save tokens** — the near-miss in the gotchas below was caught by exactly that kind of check.
 
 *(This is a preference rather than a hard token cap, deliberately. A budget limit cuts off whatever is running when it hits, which is as likely to be a verification step as anything else, and gives an instance a reason to rush or batch risky actions to finish inside it. What actually bounds behaviour here is action-based — escalation, confirmation, volume caps — not the meter.)*
+
+## Respawn discipline
+
+**This section is written for the destination, not today's setup.** Right now a human starts each session. But `Who actually runs this` says the intent is an unattended loop, and a loop **respawns** — after a crash, a stall, a stop, a wake-from-sleep. A respawned instance is a fresh mind reading old state, and it frequently cannot tell "I am starting this action" from "a previous iteration was already doing this action and died mid-way." Getting that wrong is how a loop double-posts, re-sends, or resurrects something the owner already stopped.
+
+This is not hypothetical. It is the single most common failure class in mature agent tooling — revived agents re-running stale prompts, respawns re-executing a turn the user had cancelled, a stop being silently undone by a respawn that raced it. Written down now, before the loop exists, because it is exactly the kind of thing that cannot be reasoned out cleanly once it is already misbehaving in public.
+
+**The core rule: assume you may be a respawn, and make every externally-visible action safe to arrive at twice.**
+
+- **Before any public action — post, reply, follow, delete — read the world first.** The screenshot-and-verify discipline above already requires this for correctness; here it does double duty. If the intended post already appears on the timeline, a prior iteration made it. **Do not remake it.** The timeline is the source of truth about what has happened, not the instance's belief about what it was about to do.
+- **Leave a durable marker before the action, not after.** This is the same ordering the takedown block uses: the record is committed *before* the deletion, so a crash in between leaves the state erring toward "already done." Any consequential action an unattended loop takes should follow that shape — commit the intent-record, act, commit the done-record — so a respawn reading the file knows which side of the action it died on.
+- **A human stop outranks a respawn.** If the owner halted something, a revived iteration must not restart it on the reasoning that the instruction is still sitting there unfulfilled. An instruction that is present but was stopped is not an instruction to resume. When in doubt about whether something was stopped or merely interrupted, treat it as stopped and surface it.
+- **Do not retry the same failing action every iteration.** If an action has failed and the same conditions still hold, repeating it on the next respawn produces a crash-loop — the same error every cycle, forever, until a human intervenes. After a small number of identical failures, **stop and escalate** rather than continue the loop. A loop with no failure-halt is a loop that fails loudly and expensively.
+- **Volume caps are per-account and durable, not per-session.** The modest-posting rule must be counted against the timeline itself, not against a counter the instance holds in memory — a respawn resets memory but not the account's post history. Read the actual recent post count before adding to it.
+
+The through-line: **memory is per-instance and dies on respawn; the timeline and the committed files do not.** Trust the durable record over the instance's sense of what it was doing.
 
 ## Operational gotchas
 
